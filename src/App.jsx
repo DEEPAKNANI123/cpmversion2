@@ -951,7 +951,7 @@ function Employee({ profile, activeUser, showToast }) {
                           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                             <div style={{ fontSize: 14, fontWeight: 800, color: '#1a1a1a' }}>{sub.title || sub.global_subthemes?.title}</div>
                             <div style={{ marginLeft: 'auto', display: 'flex', gap: 8, alignItems: 'center' }}>
-                              {(sub.status === 'REVERTED' || sub.status === 'REJECTED') && (
+                              {(canEdit() || sub.status === 'REVERTED' || sub.status === 'REJECTED') && (
                                 <button 
                                   className="badge badge-blue" 
                                   style={{ cursor: 'pointer', border: 'none' }}
